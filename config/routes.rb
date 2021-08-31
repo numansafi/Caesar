@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:destroy]
   resources :reviews, only: [:destroy]
-
+    get '/my_bookings', to: 'bookings#my_bookings'
 end
