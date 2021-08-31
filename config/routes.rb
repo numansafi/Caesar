@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :venues, only: [:index, :show] do
     resources :bookings, except: [:destroy]
+    resources :reviews, except: [:destroy]
   end
   resources :bookings, only: [:destroy]
+  resources :reviews, only: [:destroy]
 
 end
