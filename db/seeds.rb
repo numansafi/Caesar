@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+
+venue = Venue.new(
+  name: 'Mcdonalds',
+  description: 'Michelin starred American bistro',
+  address: '100 Main Street',
+  venue_type: 'Restaurant',
+  venue_attributes: 'charming'
+)
+puts "finished seed"
+venue.save!
