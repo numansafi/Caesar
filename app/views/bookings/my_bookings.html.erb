@@ -1,7 +1,7 @@
 <h2>My Bookings</h2>
 
 <%  @bookings.each do |booking| %>
-   <p><%= booking.start_date_time.strftime("#{booking.start_date_time.day.ordinalize} %B %Y") %></p>
-   <p><%= booking.start_date_time.strftime("%H:%M") %></p>
+   <p><%= booking.date_time.strftime("#{booking.date_time.day.ordinalize} %B %Y") %></p>
+   <p><%= booking.date_time.strftime("%H:%M") %></p>
   <%= booking.number_of_people %>
 <% end %>
