@@ -1,0 +1,43 @@
+.fa-heart {
+  color: red;
+}
+
+#footer-container {
+  min-height: 100%;
+}
+#footer-main {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+.footer {
+  background-color: $blue;
+  padding: 90px;
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  clear: both;
+  h6, {
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+.links {
+  text-align: center;
+  margin-top: -17px;
+  margin-left: 17px;
+  .fa-facebook, .fa-instagram, .fa-github {
+    color: white;
+    font-size: larger;
+    padding: 5px;
+  }
+}
+
+.fa-facebook:hover,.fa-instagram:hover,.fa-github:hover {
+  color: $purple;
+  transform: scale(1.2);
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
