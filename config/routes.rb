@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :venues, only: [:index, :show] do
-    resources :bookings, except: [:destroy]
+    resources :bookings, except: [:destroy, :index, :show]
     resources :reviews, except: [:destroy]
   end
   resources :bookings, only: [:destroy]
   resources :reviews, only: [:destroy]
-    get '/my_bookings', to: 'bookings#my_bookings'
+  get '/my_bookings', to: 'bookings#my_bookings'
 end
