@@ -1,0 +1,32 @@
+.home-container {
+  color: $blue;
+  font-family: $headers-font;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 32px;
+  h1 {
+    font-weight: 700;
+    font-size: 96px;
+    // padding: 20px;
+  }
+  h2 {
+    font-weight: 300;
+    font-size: 24px;
+    font-style: italic;
+    padding-left: 8px;
+    // margin-left: 24px;
+  }
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-search-btn {
+  padding-left: 8px;
+}
