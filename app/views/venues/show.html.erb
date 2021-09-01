@@ -1,4 +1,5 @@
 <h2><%= @venue.name %></h2>
+<span><%= link_to "Book now", new_venue_booking_path(@venue) %></span>
 <hr>
 <p><%= @venue.description  %></p>
 <p><%= @venue.address %></p>
