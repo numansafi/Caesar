@@ -1,0 +1,38 @@
+.visioncard {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 25%;
+  border-radius: 20px;
+}
+
+.visioncard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.visioncontainer {
+  padding: 2px 16px
+}
+
+.visioncards {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+// reuse code above
+.vision-img {
+  width: 150px;
+  height: 150px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.vision-img1 {
+  width: 150px;
+  height: 150px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.vision-img2 {
+  width: 100px;
+  height: 100px;
+  padding: 20px 20px 20px 20px;
+}
