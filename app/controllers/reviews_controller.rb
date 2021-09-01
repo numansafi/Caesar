@@ -1,13 +1,14 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy ]
+  before_action :set_review, only: [:edit, :update, :destroy]
   before_action :set_venue, only: [:new, :create, :edit, :index ]
 
   def index
     @reviews = Review.all
   end
 
-  def show
-  end
+  # don't need show page for reviews, as edit/see these on venue show page
+  # def show
+  # end
 
   def new
     @review = Review.new

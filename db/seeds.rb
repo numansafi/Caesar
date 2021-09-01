@@ -16,3 +16,10 @@ venue = Venue.new(
 )
 puts "finished seed"
 venue.save!
+  Review.create!(
+    venue: venue,
+    rating: rand(0..100),
+    description: 'Best in town',
+    user_id: 1,
+    venue_id: 1
+  )

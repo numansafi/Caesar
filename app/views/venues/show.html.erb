@@ -4,3 +4,8 @@
 <p><%= @venue.address %></p>
 <p><%= @venue.venue_type %></p>
 <p><%= @venue.venue_attributes %></p>
+  <h2>Review</h2>
+  <h2><% @venue.reviews.each do |review| %></h2>
+  <p> <%= review.description %></p>
+  <p> <%= review.rating %>/100</p>
+  <% end %>
