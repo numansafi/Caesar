@@ -37,6 +37,10 @@ class ReviewsController < ApplicationController
     redirect_to venue_path(@venue)
   end
 
+  def my_reviews
+    @reviews = Review.where(user: current_user)
+  end
+
   private
 
   def set_review
