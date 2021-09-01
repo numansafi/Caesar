@@ -1,7 +1,7 @@
-.green-button {
+.purple-button {
   display: inline-block;
   border-radius: 50px;
-  background-color: #1EDD88;;
+  background-color: #6C63FF;;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -13,14 +13,14 @@
   margin: 5px;
 }
 
-.green-button span {
+.purple-button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.green-button span:after {
+.purple-button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -29,11 +29,11 @@
   transition: 0.5s;
 }
 
-.green-button:hover span {
+.purple-button:hover span {
   padding-right: 25px;
 }
 
-.green-button:hover span:after {
+.purple-button:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -42,7 +42,7 @@
 .orange-button {
   display: inline-block;
   border-radius: 50px;
-  background-color: #E67E22;;
+  background-color: #F95A00;;
   border: none;
   color: #FFFFFF;
   text-align: center;
