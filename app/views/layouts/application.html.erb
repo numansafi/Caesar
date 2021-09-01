@@ -12,9 +12,15 @@
   </head>
 
   <body>
+
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
     <%= yield %>
+    <div id="footer-container">
+      <div id="footer-main">
+      <%# These above divs make the footer stick to the bottom of the page, do not remove! %>
+      </div>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>
