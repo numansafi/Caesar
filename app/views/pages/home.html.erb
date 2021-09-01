@@ -1,5 +1,38 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+ <div class="home-banner">
+  <div class="home-container">
+    <div class="content-box">
+      <h1>Caesar</h1>
+      <h2>Conquer Your World</h2>
+      <a class="home-search-btn">Search</a>
+    </div>
+    <div id="img-flex-home">
+    <%= image_tag "eating-together.png", alt: "Two people eating together", width: 400 %>
+    </div>
+  </div>
+</div>
+
+
+  <div class="home-wrapper">
+    <div id="caesar-search-box">
+      <div id="caesar-search-img">
+        <%= image_tag "location-search.png", alt: "Woman searching for venues on phone", width: 400 %>
+      </div>
+      <div id="caesar-search-h2">
+        <h2>Search for your new favourite venue using our accessibility filters</h2>
+    </div>
+  </div>
+  <div id="caesar-review-box">
+    <div id="caesar-review-h2">
+      <h2>Leave reviews and let the community know which venues are accessible</h2>
+    </div>
+    <div id="caesar-review-img">
+      <%= image_tag "review-person.png", alt: "Person leaving adding stars on a review", width: 300 %>
+    </div>
+  </div>
+  </div>
+
+
 <div class="visioncards d-flex justify-content-between">
   <div class="visioncard">
     <%= image_tag "visioncards.png", class: "vision-img" %>
@@ -20,3 +53,6 @@
     </div>
   </div>
 </div>
+
+<p><%= link_to "See all venues", venues_path %></p>
+

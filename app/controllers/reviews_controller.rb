@@ -1,24 +1,25 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: [:show, :edit, :update, :destroy ]
+  before_action :set_review, only: [:edit, :update, :destroy]
   before_action :set_venue, only: [:new, :create, :edit, :index ]
 
   def index
     @reviews = Review.all
   end
 
-  def show
-  end
+  # don't need show page for reviews, as edit/see these on venue show page
+  # def show
+  # end
 
   def new
     @review = Review.new
   end
 
   def create
-    @review = Review.new(booking_params)
+    @review = Review.new(review_params)
     @review.venue = @venue
     @review.user = current_user
     if @review.save
-      redirect to venue_path(@venue)
+      redirect_to venue_path(@venue)
     else
       render :new
     end
@@ -48,10 +49,10 @@ class ReviewsController < ApplicationController
   end
 
   def set_venue
-    @venue = Venue.find(params[:id])
+    @venue = Venue.find(params[:venue_id])
   end
 
-  def venue_params
-    params.require(:venue).permit(:rating, :description)
+  def review_params
+    params.require(:review).permit(:rating, :description)
   end
 end

@@ -1,6 +1,20 @@
 <h2><%= @venue.name %></h2>
+<span><%= link_to "Book now", new_venue_booking_path(@venue) %></span>
+
 <hr>
 <p><%= @venue.description  %></p>
 <p><%= @venue.address %></p>
 <p><%= @venue.venue_type %></p>
 <p><%= @venue.venue_attributes %></p>
+  <h2>Review</h2>
+  <h2><% @venue.reviews.each do |review| %></h2>
+  <p> <%= review.description %></p>
+  <p> <%= review.rating %>/100</p>
+  <% end %>
+
+<h2>Add a review</h2>
+<%= simple_form_for [ @venue,@review ] do |f| %>
+  <%= f.input :description, label: 'Please enter your review commentary'%>
+  <%= f.input :rating, label: 'Give a rating' %>
+  <%= f.submit 'Submit Review' %>
+<% end %>
