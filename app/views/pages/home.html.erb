@@ -4,7 +4,23 @@
     <div class="content-box">
       <h1>Caesar</h1>
       <h2>Conquer Your World</h2>
+
       <a class="purple-button">Search</a>
+
+        <div>
+          <div>
+          <%= form_tag venues_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search for anything"
+          %>
+          </div>
+          <%= submit_tag "Search", class: "btn btn-gradient inline" %>
+        <% end %>
+      </div>
+      <%# <a class="home-search-btn">Search</a> %>
+
     </div>
     <div id="img-flex-home">
     <%= image_tag "eating-together.png", alt: "Two people eating together", width: 400 %>
@@ -43,6 +59,7 @@
 
 
 
+
   <div class="home-wrapper">
     <div id="caesar-search-box">
       <div id="caesar-search-img">
@@ -61,6 +78,7 @@
     </div>
   </div>
   </div>
+
 
 
 <p><%= link_to "See all venues", venues_path %></p>

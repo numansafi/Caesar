@@ -1,0 +1,42 @@
+.venues-card-container{
+  width: auto;
+  margin: 30px;
+  font-weight: 700;
+  color: $blue;
+}
+
+.venue-index-card {
+    overflow: hidden;
+    height: 320px;
+    background: white;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 1%;
+    border-radius: 16px;
+}
+
+.venue-index-card img {
+  height: 100%;
+  width: 400px;
+  object-fit: cover;
+}
+
+.venue-index-card h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: $blue;
+}
+
+.venue-index-card p {
+  font-size: 24px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.venue-index-card .venue-index-card-infos {
+  padding: 16px;
+}
