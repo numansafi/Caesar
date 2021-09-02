@@ -1,5 +1,18 @@
-<h2>All Venues</h2>
+<div class="index-page-container">
+  <div class="filter-bar">
+  <h1> Filter</h1>
+  </div>
+  <div class="venues-card-container">
+      <h1>Venues in your area</h1>
 
-<% @venues.each do |venue| %>
-  <p><%= link_to venue.name, venue_path(venue)  %></p>
-<% end  %>
+      <% @venues.each do |venue| %>
+      <div class="venue-index-card">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="venue-index-card-infos">
+          <h2><%= link_to venue.name, venue_path(venue)  %></h2>
+          <p><%= venue.venue_type %></p>
+          </div>
+      </div>
+      <% end  %>
+  </div>
+</div>
