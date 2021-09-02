@@ -4,11 +4,10 @@
     <h1>New Booking</h1>
 <%= simple_form_for [ @venue,@booking ] do |f| %>
   <%= f.input :number_of_people, html5: true, label: 'Party Size' %>
-  <%= f.input :date_time, as: :time, html5: true, label: 'Time' %>
-  <%= f.input :date_time, as: :date, html5: true, label: 'Date'  %>
-  <%= f.submit 'Create Booking', class: 'btn-gradient'%>
+  <%= f.input :time, html5: true, label: 'Time'  %>
+  <%= f.input :date, html5: true, label: 'Date'  %>
+  <%= f.submit 'Create Booking', id: "sweet-alert-demo", class: 'btn btn-primary'%>
 <% end %>
     </div>
   </div>
 </div>
-+

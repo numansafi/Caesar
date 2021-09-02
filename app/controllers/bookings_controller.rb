@@ -28,6 +28,11 @@ class BookingsController < ApplicationController
     redirect_to my_bookings_path
   end
 
+  def destroy
+    @booking.destroy
+    redirect_to my_bookings_path
+  end
+
   def my_bookings
     # Takes user to their bookings
     @bookings = Booking.where(user: current_user)
@@ -44,7 +49,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date_time, :date_time, :number_of_people)
+    params.require(:booking).permit(:date,:time,:number_of_people)
   end
 
 end
