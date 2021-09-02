@@ -1,0 +1,80 @@
+.purple-button {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: #6C63FF;;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.purple-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.purple-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.purple-button:hover span {
+  padding-right: 25px;
+}
+
+.purple-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.orange-button {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: #F95A00;;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.orange-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.orange-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.orange-button:hover span {
+  padding-right: 25px;
+}
+
+.orange-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
