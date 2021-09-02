@@ -5,10 +5,10 @@
       <h1>Caesar</h1>
       <h2>Conquer Your World</h2>
 
-      <a class="purple-button">Search</a>
+
 
         <div>
-          <div>
+          <div class= "home-search">
           <%= form_tag venues_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
@@ -16,8 +16,10 @@
             placeholder: "Search for anything"
           %>
           </div>
-          <%= submit_tag "Search", class: "btn btn-gradient inline" %>
         <% end %>
+      </div>
+      <div class="button-home">
+      <a class="purple-button">Search</a>
       </div>
       <%# <a class="home-search-btn">Search</a> %>
 
@@ -82,3 +84,4 @@
 
 
 <p><%= link_to "See all venues", venues_path %></p>
+<%# hello %>
