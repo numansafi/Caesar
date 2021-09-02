@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
 
-  before_action :set_booking, only: [:edit, :update, :destroy]
+  before_action :set_booking, only: [:show, :edit, :update, :destroy]
   before_action :set_venue, only: [:new, :create, :edit]
 
   def new
@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   end
 
   def update
-    @venue.update(booking_params)
+    @booking.update(booking_params)
     # Path to go to user bookings page
     redirect_to my_bookings_path
   end

@@ -1,29 +1,16 @@
 <h2>My Bookings</h2>
 
 <%  @bookings.each do |booking| %>
-  <% if booking.date > (Time.now + 2) %>
-    <h2>Upcoming Bookings</h2>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
+      <div class="booking-card-product">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
+        <div class="booking-card-product-infos">
           <h2><%= booking.venue.name %></h2>
-          <p><%= booking.date.strftime("%d/%m/%Y")  %> at <%= booking.time.strftime("%H:%M")%></p>
-          <p>Table for <%= booking.number_of_people%> people</p>
-          <span><%= link_to "Edit", edit_venue_booking_path(booking.venue.id, booking) %></span>
-          <span><%= link_to "Delete", booking_path(booking), method: :delete %></span>
+          <p><i class="fas fa-clock"></i> <%= booking.date.strftime("%d/%m/%y")%> at <%= booking.time.strftime("%H:%M") %></p>
+          <p> <i class="fas fa-user"></i>
+
+</i> Table for <%= booking.number_of_people%> people</p>
+          <span><%= link_to "Modify", edit_venue_booking_path(booking.venue.id, booking) %></span>
+          <span><%= link_to "Cancel", booking_path(booking), method: :delete %></span>
         </div>
       </div>
-  <% elsif booking.date < Time.now %>
-  <h2>Past Bookings</h2>
-        <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-          <h2><%= booking.venue.name %></h2>
-          <p><%= booking.date.strftime("%d/%m/%Y")  %> at <%= booking.time.strftime("%H:%M")%></p>
-          <p>Table for <%= booking.number_of_people%> people</p>
-          <span><%= link_to "Edit", edit_venue_booking_path(booking.venue.id, booking) %></span>
-          <span><%= link_to "Delete", booking_path(booking), method: :delete %></span>
-        </div>
-      </div>
-  <% end %>
 <% end %>

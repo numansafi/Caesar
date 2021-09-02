@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :venues, only: [:index, :show] do
-    resources :bookings, except: [:destroy, :index, :show]
+    resources :bookings, except: [:destroy]
     resources :reviews, except: [:destroy]
   end
   resources :bookings, only: [:destroy]

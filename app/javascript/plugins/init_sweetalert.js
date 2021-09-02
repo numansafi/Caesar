@@ -1,11 +1,15 @@
 import swal from "sweetalert";
 
 const initSweetalert = (selector, options = {}, callback = () => {}) => {
-  const swalButton = document.querySelector(selector);
+  const swalButton = document.querySelector("#sweet-alert-demo");
+  const form = document.querySelector("form");
   if (swalButton) {
     // protect other pages
-    swalButton.addEventListener("click", () => {
-      swal(options).then(callback); // <-- add the `.then(callback)`
+    swalButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      swal(options).then((callback) => {
+        form.submit;
+      });
     });
   }
 };
