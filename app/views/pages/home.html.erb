@@ -56,3 +56,19 @@
 
 <p><%= link_to "See all venues", venues_path %></p>
 
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-10" >
+      <%= form_tag venues_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search for anything"
+        %>
+
+        <%= submit_tag "Search", class: "btn btn-gradient inline" %>
+      <% end %>
+    </div>
+  </div>
+</div>
