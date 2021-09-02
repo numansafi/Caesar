@@ -7,19 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
-venue = Venue.new(
-  name: 'Mcdonalds',
-  description: 'Michelin starred American bistro',
-  address: '100 Main Street',
-  venue_type: 'Restaurant',
-  venue_attributes: 'charming'
-)
-puts "finished seed"
-venue.save!
+Venue.delete_all
+Review.delete_all
+
+puts "Starting seeding..."
+
+10.times do
+  venue = Venue.new(
+    name: Faker::Restaurant.name,
+    description: Faker::Restaurant.description,
+    address: Faker::Address.full_address,
+    venue_type: Faker::Restaurant.type,
+    venue_attributes: ["Disabled Access", "Disabled Parking", "Quiet", "Dim Lighting"].sample
+  )
+
+  venue.save!
   Review.create!(
     venue: venue,
-    rating: rand(0..100),
-    description: 'Best in town',
-    user_id: 1,
-    venue_id: 1
+    rating: rand(0..5),
+    description: Faker::Restaurant.review,
+    venue_id: venue.id,
+    user_id: 1
   )
+end
+
+puts "finished seed!"
