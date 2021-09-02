@@ -1,7 +1,7 @@
 .visioncard {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  width: 25%;
+  width: 82%;
   border-radius: 20px;
   height: 320px;
   display: flex;
@@ -19,6 +19,8 @@
 }
 
 .visioncards {
+  display: grid;
+  // justify-content: space-between;
   margin-left: 70px;
   margin-right: 70px;
   margin-top: 200px;
@@ -35,14 +37,35 @@
 }
 // reuse code above for cards
 .vision-img {
-  width: 150px;
-  height: 150px;
+  width: 64%;
+  // height: 150px;
 }
 .vision-img1 {
-  width: 130px;
-  height: 130px;
+  width: 64%;
 }
 .vision-img2 {
-  width: 120px;
-  height: 120px;
+  width: 64%;
+}
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+@media(min-width: 321px) and (max-width: 480px) {
+  .visioncards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(min-width: 481px) and (max-width: 768px) {
+  .visioncards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(min-width: 769px) {
+  .visioncards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
