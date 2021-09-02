@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 4px;
 }
 
 .home-wrapper {
@@ -43,3 +44,36 @@
   align-items: center;
   max-width: 100%;
 }
+
+
+//large quotes around text
+// blockquote {
+//     width: 500px;
+//     margin: 0.25em 0;
+//     padding: 0.35em 40px;
+//     line-height: 1.45;
+//     position: relative;
+//     color: #383838;
+// }
+
+// blockquote:before {
+//     font-family: Georgia, serif;
+//     position: absolute;
+//     font-size: 6em;
+//     line-height: 1;
+//     top: 0;
+//     left: -0.1em;
+//     content: "\201C";
+// }
+// blockquote:after {
+//     font-family: Georgia, serif;
+//     position: absolute;
+//    /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+//     float:right;
+//     font-size:6em;
+//     line-height: 1;
+//     right:-0.1em; //to move from side to side, make classes
+//     bottom:-0.5em;
+//     content: "\201D";
+
+// }
