@@ -7,18 +7,18 @@
 
 .venue-index-card {
     overflow: hidden;
-    height: 320px;
+    height: 240px;
     background: white;
     display: flex;
     align-items: center;
-    width: 95%;
-    margin: 5%;
+    width: 82%;
+    margin: 2%;
     border-radius: 16px;
 }
 
 .venue-index-card img {
   height: 100%;
-  width: 400px;
+  width: 240px;
   object-fit: cover;
 }
 
@@ -32,7 +32,7 @@
 .venue-index-card p {
   font-size: 24px;
   line-height: 1.4;
-  opacity: .7;
+  // opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
   color: $orange;
@@ -45,4 +45,8 @@
 .venue-index-card-infos{
   // display: flex;
   // align-items: between;
+}
+
+.checked {
+  color: $purple;
 }
