@@ -43,6 +43,11 @@
       <% @venue.reviews.each do |review| %>
         <div class="outer-wrapper">
           <div class="each-review-box">
+          <% if review.user.avatar.attached? %>
+            <% cl_image_tag review.user.avatar.key , class: "avatar review-avatar" %>
+          <% else %>
+            <%= cl_image_tag "images_aqhfrv", class: "avatar review-avatar" %>
+          <% end %>
             <p> <%= review.description %></p>
             <p> <%= review.rating %>/100</p>
           </div>
