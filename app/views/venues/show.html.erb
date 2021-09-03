@@ -43,7 +43,8 @@
       <% @venue.reviews.each do |review| %>
         <div class="outer-wrapper">
           <div class="each-review-box">
-            <p> <%= review.description %></p>
+            <p> <%= review.user.first_name %> said:</p>
+            <p> "<%= review.description %>"</p>
             <p> <%= review.rating %>/100</p>
           </div>
         </div>

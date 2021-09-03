@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     width: 95%;
-    margin: 1%;
+    margin: 5%;
     border-radius: 16px;
 }
 
@@ -35,8 +35,14 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+  color: $orange;
 }
 
 .venue-index-card .venue-index-card-infos {
   padding: 16px;
+}
+
+.venue-index-card-infos{
+  // display: flex;
+  // align-items: between;
 }
