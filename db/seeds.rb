@@ -11,7 +11,7 @@ Venue.delete_all
 Review.delete_all
 
 puts "Starting seeding..."
-
+User.create(first_name: "Scott", last_name: "Johnson", username: "scott2020", email: "scott@gmail.com", password: "123456")
 10.times do
   venue = Venue.new(
     name: Faker::Restaurant.name,
@@ -21,13 +21,14 @@ puts "Starting seeding..."
     venue_attributes: ["Disabled Access", "Disabled Parking", "Quiet", "Dim Lighting"].sample
   )
 
-  venue.save!
+
+venue.save!
   Review.create!(
     venue: venue,
     rating: rand(0..5),
     description: Faker::Restaurant.review,
     venue_id: venue.id,
-    user_id: 1
+    user: User.first
   )
 end
 

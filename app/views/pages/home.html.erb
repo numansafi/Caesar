@@ -5,10 +5,10 @@
       <h1>Caesar</h1>
       <h2>Conquer Your World</h2>
 
-      <a class="purple-button">Search</a>
+
 
         <div>
-          <div>
+          <div class= "home-search">
           <%= form_tag venues_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
@@ -16,8 +16,10 @@
             placeholder: "Search for anything"
           %>
           </div>
-          <%= submit_tag "Search", class: "btn btn-gradient inline" %>
         <% end %>
+      </div>
+      <div class="button-home">
+      <a class="purple-button">Search</a>
       </div>
       <%# <a class="home-search-btn">Search</a> %>
 
@@ -30,12 +32,12 @@
 
 
 
-<div class="visioncards d-flex justify-content-between">
+<div class="visioncards">
   <div class="visioncard">
     <%= image_tag "visioncards.png", class: "vision-img" %>
     <div class="container">
      <div class= "visiontext">
-      <h4><b>"Removing social barriers"</b></h4>
+      <h4><b>Removing social barriers</b></h4>
       </div>
     </div>
   </div>
@@ -43,7 +45,7 @@
     <%= image_tag "visioncards1.png", class: "vision-img1" %>
     <div class="container">
     <div class= "visiontext1">
-      <h4><b>"Accessability and inclusivity"</b></h4>
+      <h4><b>Accessability and inclusivity</b></h4>
      </div>
     </div>
   </div>
@@ -51,7 +53,7 @@
     <%= image_tag "visioncards2.png", class: "vision-img2" %>
     <div class="container">
       <div class= "visiontext2">
-      <h4><b>"Having a good time!"</b></h4>
+      <h4><b>Having a good time!</b></h4>
       </div>
     </div>
   </div>
@@ -82,3 +84,4 @@
 
 
 <p><%= link_to "See all venues", venues_path %></p>
+<%# hello %>
