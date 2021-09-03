@@ -1,4 +1,5 @@
 .show-container {
+  animation: transitionIn 0.75s;
   padding: 40px;
   h1 {
     font-size: 48px;
@@ -22,6 +23,26 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  max-width: 50%;
+  padding: 20px;
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: italic;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+  }
+  p {
+    color: $orange;
+  }
 }
 .top-show-content {
   display: flex;
@@ -32,6 +53,7 @@
 }
 
 .review-container {
+  animation: transitionIn 0.75s;
   padding: 40px;
   p {
     color: $orange;
@@ -79,4 +101,9 @@
 
 .review-avatar {
   margin-left: 20px;
+
+.fa-check-circle {
+  color: $orange;
+  padding-left: 8px;
+
 }

@@ -1,24 +1,7 @@
 <div class="index-page-container">
-  <div class="filter-bar">
-  <h1> Filter</h1>
-  </div>
-  <div class="venues-card-container">
-      <h1>Venues in your area</h1>
-
-      <% @venues.each do |venue| %>
-      <div class="venue-index-card">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-          <div class="venue-index-card-infos">
-          <h2><%= link_to venue.name, venue_path(venue)  %></h2>
-          <p><%= venue.venue_type %></p>
-          </div>
-      </div>
-      <% end  %>
-  </div>
-</div>
-
-
-<div class="checkbox-box">
+  <div class="filter-bar" >
+  <h1 style= color: $blue;> Filter</h1>
+  <div class="checkbox-box">
 <label class="container">One
   <input type="checkbox" checked="checked">
  <span class="checkmark"></span>
@@ -64,4 +47,26 @@
   <span class="checkmark"></span>
 </label>
 </div>
-<%# hello %>
+  </div>
+  <div class="venues-card-container" style= color: $blue;>
+      <h1>Venues in your area</h1>
+
+      <% @venues.each do |venue| %>
+      <div class="venue-index-card">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="venue-index-card-infos">
+            <h2><%= venue.name  %></h2>
+            <p><%= venue.venue_type %></p>
+              <div style="padding: 20px">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              </div>
+            <h2><%= link_to "Find out more", venue_path(venue),  class: 'purple-button'   %></h2>
+          </div>
+      </div>
+      <% end  %>
+  </div>
+</div>

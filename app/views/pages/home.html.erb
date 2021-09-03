@@ -5,23 +5,17 @@
       <h1>Caesar</h1>
       <h2>Conquer Your World</h2>
 
+        <div class= "home-search">
+        <%= form_tag venues_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Search for anything"
+        %>
+        <%= submit_tag "Search", class: "button-home purple-button" %>
+        </div>
+      <% end %>
 
-
-        <div>
-          <div class= "home-search">
-          <%= form_tag venues_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Search for anything"
-          %>
-          </div>
-        <% end %>
-      </div>
-      <div class="button-home">
-      <a class="purple-button">Search</a>
-      </div>
-      <%# <a class="home-search-btn">Search</a> %>
 
     </div>
     <div id="img-flex-home">
@@ -83,5 +77,5 @@
 
 
 
-<p><%= link_to "See all venues", venues_path %></p>
+<%# <p><%= link_to "See all venues", venues_path</p> %>
 <%# hello %>
