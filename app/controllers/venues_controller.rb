@@ -30,7 +30,6 @@ class VenuesController < ApplicationController
     @review = Review.new
   end
 
-
   def venue_params
     params.require(:venue).permit(:name, :description, :address, :venue_type, :venue_attribute, :venue_type_list, :venue_attribute_list)
   end

@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   resources :bookings, only: [:destroy]
   resources :reviews, only: [:destroy]
   get '/my_bookings', to: 'bookings#my_bookings'
-  get to: '/filters_explained'
 end
