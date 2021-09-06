@@ -22,16 +22,18 @@ require("channels");
 
 // External imports
 import "bootstrap";
-
+import { initStarRating } from '../plugins/init_star_rating';
+import { initSweetalert } from "../plugins/init_sweetalert";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener("turbolinks:load", () => {
+  initStarRating();
   // Call your functions here, e.g:
   // initSelect2();
 });
 
-import { initSweetalert } from "../plugins/init_sweetalert";
+//call functions inside tubolinks, otherwise functions wont work effectively
 
 initSweetalert(
   "#sweet-alert-demo",

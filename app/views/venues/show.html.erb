@@ -53,8 +53,15 @@
 
             <p> <%= review.user.first_name %> said:</p>
             <p> "<%= review.description %>"</p>
+              <div class="review-stars">
+              <% review.rating.times do %>
+                <span class="fa fa-star checked"></span>
+              <% end %>
+              <% (5 - review.rating).times do %>
+                <span class="fa fa-star"></span>
+              <% end %>
+              </div>
 
-            <p> <%= review.rating %>/100</p>
           </div>
         </div>
       <% end %>
@@ -65,7 +72,7 @@
         <%= simple_form_for [ @venue,@review ] do |f| %>
           <div class="input-box">
             <%= f.input :description, label: "How was your visit to #{@venue.name}?"%>
-            <%= f.input :rating, label: 'Give a rating out of 100!' %>
+            <%= f.input :rating, collection: (1..5).to_a, label: 'Give a rating from 1 to 5!' %>
           </div>
           <%= f.submit 'Submit Review', class: 'orange-button'%>
         <% end %>
