@@ -22,6 +22,7 @@ gem 'redis', '~> 4.0'
 gem 'cloudinary', '~> 1.16.0'
 gem 'pg_search', '~> 2.3.0'
 gem 'faker'
+gem 'acts-as-taggable-on', '~> 7.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

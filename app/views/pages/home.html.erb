@@ -7,8 +7,8 @@
 
         <div class= "home-search">
         <%= form_tag venues_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
+        <%= text_field_tag :search,
+          params[:search],
           class: "form-control",
           placeholder: "Search for anything"
         %>

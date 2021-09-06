@@ -7,20 +7,28 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 
-Venue.delete_all
+Booking.delete_all
 Review.delete_all
+Venue.delete_all
+User.delete_all
 
 puts "Starting seeding..."
-User.create(first_name: "Scott", last_name: "Johnson", username: "scott2020", email: "scott@gmail.com", password: "123456")
+User.create(first_name: "test", last_name: "test", username: "test", email: "test@test.com", password: "123456")
 10.times do
+
+  venue_types = Venue::VENUE_TYPES.sample
+
+  venue_attributes = Venue::VENUE_ATTRIBUTES.sample
+
   venue = Venue.new(
     name: Faker::Restaurant.name,
     description: Faker::Restaurant.description,
     address: Faker::Address.full_address,
-    venue_type: Faker::Restaurant.type,
-    venue_attribute: ["Disabled Access", "Disabled Parking", "Quiet", "Dim Lighting"].sample
+    venue_type: venue_types,
+    venue_type_list: venue_types,
+    venue_attribute: venue_attributes,
+    venue_attribute_list: venue_attributes
   )
-
 
 venue.save!
   Review.create!(
