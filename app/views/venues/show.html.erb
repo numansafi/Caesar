@@ -2,6 +2,7 @@
   <div class="show-title-content">
     <h1><%= @venue.name %><i class="fas fa-utensils"></i></h1>
     <span><%= link_to "Book now", new_venue_booking_path(@venue), class: 'purple-button' %></span>
+    <span></span>
   </div>
 
   <div class="top-show-content">
@@ -31,7 +32,6 @@
       <h2><%= @venue.venue_type %></h2>
       <h4><%= @venue.address %></h4>
       <h3>"<%= @venue.description  %>"</h3>
-      <p><%= @venue.venue_attribute %><i class="fas fa-check-circle"></i></p>
 
       </div>
     </div>
