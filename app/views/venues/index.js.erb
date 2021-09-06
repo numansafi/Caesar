@@ -1,0 +1,10 @@
+function replaceVenues (innerHTML) {
+  const venues = document.getElementById('venues');
+  venues.innerHTML = innerHTML;
+}
+if ('<%= @filter %>' === "[]") {
+replaceCocktails("<%= j render 'venue', venues: venue.all %>");
+}
+else {
+replacevenues("<%= j render 'venue', venues: @venues %>");
+}
