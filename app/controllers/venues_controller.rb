@@ -20,6 +20,9 @@ class VenuesController < ApplicationController
   def show
   end
 
+  def filters_explained
+  end
+
   private
 
   def set_venue
