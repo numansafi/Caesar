@@ -20,6 +20,10 @@ html, body {
   animation: transitionIn 0.75s;
 }
 
+.main-content {
+  min-height: calc(100vh - 250px);
+}
+
 @keyframes transitionIn {
   from {
     opacity: 0;

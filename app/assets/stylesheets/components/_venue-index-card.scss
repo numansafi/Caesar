@@ -1,4 +1,4 @@
-.venues-card-container{
+.venues-card-container {
   width: auto;
   margin: 30px;
   font-weight: 700;
@@ -6,14 +6,14 @@
 }
 
 .venue-index-card {
-    overflow: hidden;
-    height: 240px;
-    background: white;
-    display: flex;
-    align-items: center;
-    width: 82%;
-    margin: 2%;
-    border-radius: 16px;
+  overflow: hidden;
+  height: 240px;
+  background: white;
+  display: flex;
+  align-items: center;
+  width: 82%;
+  margin: 2%;
+  border-radius: 16px;
 }
 
 .venue-index-card img {
@@ -30,7 +30,7 @@
 }
 
 .venue-index-card p {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.4;
   // opacity: .7;
   margin-bottom: 0;
@@ -42,7 +42,7 @@
   padding: 16px;
 }
 
-.venue-index-card-infos{
+.venue-index-card-infos {
   // display: flex;
   // align-items: between;
 }

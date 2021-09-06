@@ -14,7 +14,7 @@
           <%= image_tag "crunch.jpg", class: 'd-block w-100', alt: 'Second slide' %>
         </div>
         <div class="carousel-item">
-          <%= image_tag "birdseye", class: 'd-block w-100', alt: 'Third Slide' %>
+          <%= image_tag "birdseye.jpg", class: 'd-block w-100', alt: 'Third Slide' %>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -27,10 +27,12 @@
       </a>
     </div>
     <div class="show-description">
+      <h2 class="venue-attributes-orange"><%= @venue.venue_attribute %><i class="fas fa-check-circle"></i></h2>
       <h2><%= @venue.venue_type %></h2>
       <h4><%= @venue.address %></h4>
       <h3>"<%= @venue.description  %>"</h3>
-      <p><%= @venue.venue_attributes %><i class="fas fa-check-circle"></i></p>
+      <p><%= @venue.venue_attribute %><i class="fas fa-check-circle"></i></p>
+
       </div>
     </div>
   </div>
@@ -49,8 +51,6 @@
           <% else %>
             <%= cl_image_tag "images_aqhfrv", class: "avatar review-avatar" %>
           <% end %>
-            <p> <%= review.description %></p>
-
             <p> <%= review.user.first_name %> said:</p>
             <p> "<%= review.description %>"</p>
               <div class="review-stars">
