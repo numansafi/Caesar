@@ -1,0 +1,23 @@
+.our-filters-container {
+  padding: 20px;
+  h4 {
+    margin-top: 40px;
+  }
+}
+
+.filters-card-container {
+  margin-top: 40px;
+}
+
+.filters-card {
+  border: 0.5px solid #f6f6f6;
+  border-radius: 6px;
+  box-shadow: 2px 8px 31px -11px #a8a8a8;
+  margin: 10px;
+  padding: 24px;
+  width: 90%;
+  h3 {
+    color: $orange;
+    margin-top: 10px;
+  }
+}
