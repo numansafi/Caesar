@@ -3,8 +3,8 @@ function replaceVenues (innerHTML) {
   venues.innerHTML = innerHTML;
 }
 if ('<%= @filter %>' === "[]") {
-replaceCocktails("<%= j render 'venue', venues: venue.all %>");
+replaceVenues("<%= j render 'venue', venues: Venue.all %>");
 }
 else {
-replacevenues("<%= j render 'venue', venues: @venues %>");
+replaceVenues("<%= j render 'venue', venues: @venues %>");
 }
