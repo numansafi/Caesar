@@ -18,7 +18,7 @@ User.create(first_name: "Scott", last_name: "Johnson", username: "scott2020", em
     description: Faker::Restaurant.description,
     address: Faker::Address.full_address,
     venue_type: Faker::Restaurant.type,
-    venue_attributes: ["Disabled Access", "Disabled Parking", "Quiet", "Dim Lighting"].sample
+    venue_attribute: ["Disabled Access", "Disabled Parking", "Quiet", "Dim Lighting"].sample
   )
 
 
