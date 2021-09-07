@@ -24,11 +24,13 @@ require("channels");
 import "bootstrap";
 import { initStarRating } from "../plugins/init_star_rating";
 import { initSweetalert } from "../plugins/init_sweetalert";
+import { initForm } from "../plugins/init_form";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener("turbolinks:load", () => {
   initStarRating();
+  initForm();
   // Call your functions here, e.g:
   // initSelect2();
 });

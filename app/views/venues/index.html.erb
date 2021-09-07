@@ -49,21 +49,12 @@
 </div>
   </div>
 
-  <%= render 'venue', venues: @venues %>
+<div id="venues">
+    <%= render 'venue', venues: @venues %>
+</div>
 
 
 </div>
 
 
 <%= render "form" %>
-
-<script type="text/javascript">
-  var checkBoxes = document.querySelectorAll(".form-check-input");
-  var form = document.querySelector('form');
-
-  for (const check of checkBoxes) {
-  check.addEventListener( 'change', function() {
-    Rails.fire(form, 'submit');
-  });
-  }
-</script>
