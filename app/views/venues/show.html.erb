@@ -27,7 +27,7 @@
       </a>
     </div>
     <div class="show-description">
-      <h2 class="venue-attributes-orange"><%= @venue.venue_attribute %><i class="fas fa-check-circle"></i></h2>
+      <h2 class="venue-attributes-orange"><%= @venue.venue_attribute %> <%= @venue.icon.html_safe %></h2>
       <h2><%= @venue.venue_type %></h2>
       <h4><%= @venue.address %></h4>
       <h3>"<%= @venue.description  %>"</h3>

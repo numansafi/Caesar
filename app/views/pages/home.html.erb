@@ -15,8 +15,6 @@
         <%= submit_tag "Search", class: "button-home purple-button" %>
         </div>
       <% end %>
-
-
     </div>
     <div id="img-flex-home">
     <%= image_tag "eating-together.png", alt: "Two people eating together", width: 400 %>
@@ -58,20 +56,21 @@
 
   <div class="home-wrapper">
     <div id="caesar-search-box">
-      <div id="caesar-search-img">
-        <%= image_tag "location-search.png", alt: "Woman searching for venues on phone", width: 400 %>
-      </div>
-      <div id="caesar-search-h2">
-        <h2><blockquote>Search for your new favourite venue using <%= link_to "our accessibility filters", filters_explained_path %></blockquote></h2>
+    <div id="caesar-search-img">
+      <%= image_tag "location-search.png", alt: "Woman searching for venues on phone", width: 400 %>
+    </div>
+    <div id="caesar-search-h2">
+      <h2>Search for your new favourite venue using <%= link_to "our accessibility filters", filters_explained_path %></h2>
     </div>
   </div>
   <div id="caesar-review-box">
     <div id="caesar-review-h2">
-      <h2><blockquote>Leave reviews and let the community know which venues are accessible</blockquote></h2>
+      <h2>Leave reviews and let the community know which venues are accessible</h2>
     </div>
     <div id="caesar-review-img">
       <%= image_tag "review-person.png", alt: "Person leaving adding stars on a review", width: 300 %>
     </div>
+
   </div>
   </div>
 

@@ -17,5 +17,40 @@ class Venue < ApplicationRecord
       using: {
         tsearch: { any_word: true }
       }
-
+    def icon
+      case venue_attribute
+      when "Outdoor Space"
+        '<i class="fas fa-tree"></i>'
+      when "Disabled Toilets"
+        '<i class="fas fa-toilet"></i>'
+      when "Disabled Access"
+        '<i class="fas fa-wheelchair"></i>'
+      when "Disabled Parking"
+        '<i class="fas fa-parking"></i>'
+      when "Accommodating Staff"
+        '<i class="fas fa-smile-beam"></i>'
+      when "Flexible Menu"
+        '<i class="fas fa-pizza-slice"></i>'
+      when "Dim Lighting"
+        '<i class="fas fa-lightbulb"></i>'
+      when "Large Interior Space"
+        '<i class="fas fa-people-arrows"></i>'
+      when "No Music"
+        '<i class="fas fa-volume-mute"></i>'
+      when "Not Crowded"
+        '<i class="fas fa-users-slash"></i>'
+      when "Multiple Exits"
+        '<i class="fas fa-door-open"></i>'
+      when "No Strong Smells"
+        '<i class="fas fa-wind"></i>'
+      when "Activities For Children"
+        '<i class="fas fa-child"></i>'
+      when "Mostly Families"
+        '<i class="fas fa-baby"></i>'
+      when "Outside Food Allowed"
+        '<i class="fas fa-shopping-bag"></i>'
+      else
+        ""
+      end
+    end
 end
