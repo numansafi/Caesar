@@ -1,7 +1,11 @@
 .our-filters-container {
   padding: 20px;
+  h1 {
+    color: $blue;
+  }
   h4 {
     margin-top: 40px;
+    color: $blue;
   }
 }
 
@@ -20,4 +24,24 @@
     color: $orange;
     margin-top: 10px;
   }
+  p {
+    color: $blue;
+  }
+}
+
+.filters-explained-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filters-explained-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+}
+
+.our-filters-image {
+  padding: 7%;
 }
