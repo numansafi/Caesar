@@ -8,7 +8,7 @@ const initSweetalert = (selector, options = {}, callback = () => {}) => {
     swalButton.addEventListener("click", (event) => {
       event.preventDefault();
       swal(options).then((callback) => {
-        form.submit;
+        form.submit();
       });
     });
   }

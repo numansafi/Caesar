@@ -31,20 +31,19 @@ import { initForm } from "../plugins/init_form";
 document.addEventListener("turbolinks:load", () => {
   initStarRating();
   initForm();
+  initSweetalert(
+    "#sweet-alert-demo",
+    {
+      title: "Booking Confirmed!",
+      text: "",
+      icon: "success",
+    },
+    (value) => {
+      console.log(value);
+    }
+  );
   // Call your functions here, e.g:
   // initSelect2();
 });
 
 //call functions inside tubolinks, otherwise functions wont work effectively
-
-initSweetalert(
-  "#sweet-alert-demo",
-  {
-    title: "Booking Confirmed!",
-    text: "",
-    icon: "success",
-  },
-  (value) => {
-    console.log(value);
-  }
-);
