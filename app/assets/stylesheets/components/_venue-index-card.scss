@@ -14,6 +14,7 @@
   width: 82%;
   margin: 2%;
   border-radius: 16px;
+  border-right: 1rem solid #6C63FF;
 }
 
 .venue-index-card img {
@@ -23,19 +24,21 @@
 }
 
 .venue-index-card h2 {
-  font-size: 32px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
   color: $blue;
 }
 
 .venue-index-card p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
   // opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
-  color: $orange;
+  // margin-left: 15px;
+  color: black;
+  font-weight: lighter;
 }
 
 .venue-index-card .venue-index-card-infos {
@@ -45,8 +48,24 @@
 .venue-index-card-infos {
   // display: flex;
   // align-items: between;
+  margin-left: 40px;
+  overflow: hidden;
 }
 
 .checked {
   color: $purple;
+}
+
+
+.venue-text {
+  color: #F95A00!important;
+}
+.venue-header {
+  margin-bottom: 100px;
+}
+.star-style {
+  margin: 12px 0px 12px 0px;
+}
+#card-index-button {
+  margin-left: 0px;
 }
