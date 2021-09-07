@@ -7,6 +7,8 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/airbnb";
 
 // Your CSS partials
 @import "components/index";
@@ -15,7 +17,8 @@
 //   color: $light-gray;
 // }
 
-html, body {
+html,
+body {
   height: 50%;
   animation: transitionIn 0.75s;
 }
