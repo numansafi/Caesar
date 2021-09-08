@@ -1,5 +1,6 @@
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 
 const initMapbox = () => {
   const mapElement = document.getElementById("map");
@@ -17,8 +18,25 @@ const initMapbox = () => {
       style: "mapbox://styles/mapbox/streets-v10",
     });
 
+    map.addControl(
+      new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+      })
+    );
+
     const markers = JSON.parse(mapElement.dataset.markers);
-    new mapboxgl.Marker().setLngLat([markers.lng, markers.lat]).addTo(map);
+    const popup = new mapboxgl.Popup().setHTML(markers.info_window);
+    const element = document.createElement("div");
+    element.className = "marker";
+    element.style.backgroundImage = `url('${markers.image_url}')`;
+    element.style.backgroundSize = "contain";
+    element.style.width = "40px";
+    element.style.height = "40px";
+    new mapboxgl.Marker(element)
+      .setLngLat([markers.lng, markers.lat])
+      .setPopup(popup)
+      .addTo(map);
 
     fitMapToMarkers(map, markers);
   }

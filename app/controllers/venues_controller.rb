@@ -21,7 +21,9 @@ class VenuesController < ApplicationController
         @markers =
       {
         lat: @venue.latitude,
-        lng: @venue.longitude
+        lng: @venue.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { venue: @venue }),
+        image_url: helpers.asset_url('https://cdn-icons-png.flaticon.com/512/4802/4802121.png')
       }
   end
 

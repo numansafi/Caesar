@@ -1,0 +1,17 @@
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: $body-font;
+}
+
+.mapboxgl-popup-content h2 {
+  color: $purple;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
