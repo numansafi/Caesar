@@ -8,14 +8,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  z-index: 100;
 }
 
+#vision-one {
+  z-index: 115;
+}
 // .visioncard:hover {
 //   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 // }
 
 .visioncontainer {
-  padding: 2px 16px
+  padding: 2px 16px;
+  z-index: 100;
 }
 
 .visioncards {
