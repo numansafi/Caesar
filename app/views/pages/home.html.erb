@@ -1,6 +1,8 @@
 
- <div class="home-banner"
-      style="background-image: url( <%= asset_url 'curve-graphic.svg' %>)">
+ <div class="home-banner">
+  <svg class="curve-style" width="750" height="650" viewBox="0 0 642 555" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.37" d="M0 0H642V0C642 306.518 393.518 555 87 555H6.35643C2.84587 555 0 552.154 0 548.644V0Z" fill="#6C63FF"/>
+  </svg>
   <div class="home-container">
     <div class="content-box">
       <h1>Caesar</h1>
@@ -28,7 +30,7 @@
 
 
 <div class="visioncards">
-  <div class="visioncard">
+  <div id="vision-one" class="visioncard">
     <%= image_tag "visioncards.png", class: "vision-img" %>
     <div class="container">
      <div class= "visiontext">

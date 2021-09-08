@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+.content-box {
+  z-index: 100;
+}
+
 #caesar-search-box {
   display: flex;
   justify-content: space-around;
@@ -81,6 +85,11 @@
 .button-home .purple-button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.curve-style {
+  position: absolute;
+  top: 0;
 }
 
 
