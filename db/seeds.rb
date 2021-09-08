@@ -68,7 +68,7 @@ venues.each do |venue|
   name: venue["name"],
   description: Faker::Restaurant.description,
   image: venue["image_url"],
-  address: venue["location"]["display_address"],
+  address: venue["location"]["display_address"].join(', '),
   venue_type: venue["categories"][0]["title"],
   venue_type_list: venue["categories"][0]["title"],
   venue_attribute: venue_attributes,

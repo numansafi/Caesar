@@ -18,6 +18,11 @@ class VenuesController < ApplicationController
   end
 
   def show
+        @markers =
+      {
+        lat: @venue.latitude,
+        lng: @venue.longitude
+      }
   end
 
   def filters_explained
