@@ -1,5 +1,6 @@
 
- <div class="home-banner">
+ <div class="home-banner"
+      style="background-image: url( <%= asset_url 'curve-graphic.svg' %>)">
   <div class="home-container">
     <div class="content-box">
       <h1>Caesar</h1>
@@ -56,7 +57,7 @@
 
 
 
-  <div class="home-wrapper">
+  <div class="home-wrapper" style="background-image: url( <%= asset_url 'New-background-image.svg' %>)">
     <div id="caesar-search-box">
     <div id="caesar-search-img">
       <%= image_tag "location-search.png", alt: "Woman searching for venues on phone", width: 400 %>
@@ -73,6 +74,7 @@
       <%= image_tag "review-person.png", alt: "Person leaving adding stars on a review", width: 300 %>
     </div>
 
+    <%= link_to "Back to Top", root_path, class: 'purple-button' %>
   </div>
   </div>
 
