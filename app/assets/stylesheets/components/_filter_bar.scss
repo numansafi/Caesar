@@ -20,8 +20,13 @@
   margin-bottom: 0.4rem;
 }
 
-.tag-selector:checked + label {
+.attribute-selector:checked + label {
   background-color: $orange;
+  color: white;
+}
+
+.cuisine-selector:checked + label {
+  background-color: $purple;
   color: white;
 }
 
@@ -29,7 +34,7 @@
   width: 250px;
   position: sticky;
   top: 16px;
-  margin-top: 16px;
+  margin-top: 64px;
   margin-left: 8px;
   border-radius: 20px;
   height: 700px;
@@ -39,6 +44,12 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-#venue_type {
-  color: green;
+.reset-link {
+  color: $purple;
+  text-decoration: none;
+}
+
+.reset-link:hover {
+  text-decoration: none;
+  color: $orange;
 }

@@ -1,7 +1,7 @@
 <%= simple_form_for :query, url: venues_path, defaults: { required: false }, method: "GET", remote: true, local: false do |f| %>
 
-  <%= f.input :venue_type, label: "Restaurant Cusine",  collection: Venue::VENUE_TYPES, as: :check_boxes, id:"venue_type", input_html: { class: "tag-selector" },  item_wrapper_class: 'tag-item' %>
+  <%= f.input :venue_type, label: "Cuisine",  collection: Venue::VENUE_TYPES, as: :check_boxes, id:"venue_type", input_html: { class: "tag-selector cuisine-selector" },  item_wrapper_class: 'tag-item' %>
 
-  <%= f.input :venue_attribute, label: "Restaurant Attributes", collection: Venue::VENUE_ATTRIBUTES, as: :check_boxes, input_html: { class: "tag-selector" },  item_wrapper_class: 'tag-item' %>
-  <%= link_to "Reset", venues_path  %>
+  <%= f.input :venue_attribute, label: "Attributes", collection: Venue::VENUE_ATTRIBUTES, as: :check_boxes, input_html: { class: "tag-selector attribute-selector" },  item_wrapper_class: 'tag-item' %>
+  <%= link_to "Reset", venues_path, class:"reset-link"  %>
 <% end %>
