@@ -76,6 +76,5 @@ venues.each do |venue|
   )
 end
 
+puts "Seeding Finsihed"
 puts venues
-
-https://www.yelp.com/biz/the-ivy-london?adjust_creative=4hvraeedlZ9pYeVgPfbnIQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=4hvraeedlZ9pYeVgPfbnIQ
