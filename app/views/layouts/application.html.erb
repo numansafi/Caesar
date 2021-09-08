@@ -9,6 +9,9 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= stylesheet_pack_tag 'application' %>
+
+
   </head>
 
   <body>
@@ -22,11 +25,6 @@
       <span class="screen-reader-text">Back to top</span>
       </a>
     </div>
-    <%# <div id="footer-container">
-      <div id="footer-main"> %>
-      <%# These above divs make the footer stick to the bottom of the page, do not remove! %>
-      <%# </div>
-    </div> %>
     <%= render 'shared/footer' %>
   </body>
 </html>

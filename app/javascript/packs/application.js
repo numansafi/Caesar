@@ -26,6 +26,7 @@ import { initStarRating } from "../plugins/init_star_rating";
 import { initSweetalert } from "../plugins/init_sweetalert";
 import { initForm } from "../plugins/init_form";
 import { initFlatpickr } from "../plugins/flatpickr";
+import { initMapbox } from "../plugins/init_mapbox";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -33,6 +34,7 @@ document.addEventListener("turbolinks:load", () => {
   initStarRating();
   initForm();
   initFlatpickr();
+  initMapbox();
   initSweetalert(
     "#sweet-alert-demo",
     {
@@ -44,6 +46,7 @@ document.addEventListener("turbolinks:load", () => {
       console.log(value);
     }
   );
+
   // Call your functions here, e.g:
   // initSelect2();
 });
