@@ -1,5 +1,5 @@
 class Venue < ApplicationRecord
-  VENUE_TYPES = ["Indian", "Italian", "Chinese","Thai","Mexican","American"].freeze
+  VENUE_TYPES = ["Indian", "Italian", "Chinese","French","Mexican","Korean", "British","Japanese", "Spanish","Taiwanese", "American"].freeze
 
   VENUE_ATTRIBUTES = ["Outdoor Space", "Disabled Toilets", "Disabled Access", "Disabled Parking", "Accommodating Staff", "Flexible Menu", "Dim Lighting", "Large Interior Space", "No Music", "Not Crowded", "Multiple Exits","No Strong Smells","Activities For Children","Mostly Families", "Outside Food Allowed"].freeze
 
