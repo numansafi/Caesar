@@ -27,12 +27,14 @@
       </a>
     </div>
     <div class="show-description">
-      <h2 class="venue-attributes-orange">
+      <div class="venue-attributes-orange">
         <% @venue.venue_attribute.each do |attr|%>
+        <div class="d-flex">
           <%= attr %>
-          <%= @venue.icon(attr).html_safe %>
+          <%= @venue.icon(attr).html_safe%>
+        </div>
         <% end %>
-      </h2>
+      </div>
       <h2><%= @venue.venue_type %></h2>
       <h3>"<%= @venue.description  %>"</h3>
 
@@ -55,7 +57,7 @@
 
 <hr>
 <div class="review-container">
-  <h2>User Reviews</h2>
+  <h2>Reviews</h2>
     <div class="user-reviews-container">
       <% @venue.reviews.each do |review| %>
         <div class="outer-wrapper">

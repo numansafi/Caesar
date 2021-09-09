@@ -64,6 +64,8 @@
 
 .venue-attributes-orange {
   color: $orange;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-reviews-container {
@@ -115,4 +117,8 @@
 .review-stars {
   margin-left: 20px;
   color: grey;
+}
+
+.attr-icon-show {
+  padding: 4px;
 }
