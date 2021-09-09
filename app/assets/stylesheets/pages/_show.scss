@@ -16,7 +16,7 @@
   padding: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between!important;
+  justify-content: space-between !important;
 }
 .show-description {
   display: flex;
@@ -25,16 +25,19 @@
   max-width: 50%;
   padding: 20px;
   h2 {
+    padding-bottom: 10px;
     font-size: 24px;
     font-weight: normal;
     font-style: normal;
   }
   h3 {
+    padding-bottom: 10px;
     font-size: 18px;
     font-weight: normal;
     font-style: italic;
   }
   h4 {
+    padding-bottom: 10px;
     font-size: 18px;
     font-weight: normal;
     font-style: normal;
@@ -53,7 +56,7 @@
 
 .review-container {
   animation: transitionIn 0.75s;
-  padding: 40px;
+  padding: 10px;
   p {
     color: $orange;
   }
@@ -112,5 +115,4 @@
 .review-stars {
   margin-left: 20px;
   color: grey;
-
 }

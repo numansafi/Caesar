@@ -12,6 +12,26 @@
 }
 
 #map {
-  width: 100%;
-  height: 500px;
+  width: 40%;
+  height: 250px;
+  padding: 5px;
+}
+
+.map-container {
+  padding: 20px;
+  border: 0.5px solid #f6f6f6;
+  border-radius: 6px;
+  box-shadow: 2px 8px 31px -11px #a8a8a8;
+  margin: 10px;
+}
+
+.address {
+  color: $blue;
+  padding-top: 10px;
+  word-spacing: 2px;
+}
+
+.address i {
+  color: $purple;
+  font-size: 20px;
 }

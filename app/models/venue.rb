@@ -3,6 +3,7 @@ class Venue < ApplicationRecord
 
   VENUE_ATTRIBUTES = ["Outdoor Space", "Disabled Toilets", "Disabled Access", "Disabled Parking", "Accommodating Staff", "Flexible Menu", "Dim Lighting", "Large Interior Space", "No Music", "Not Crowded", "Multiple Exits","No Strong Smells","Activities For Children","Mostly Families", "Outside Food Allowed"].freeze
 
+  serialize :venue_attribute, Array
   has_many :reviews
   acts_as_taggable_on :venue_types
   acts_as_taggable_on :venue_attributes
@@ -19,8 +20,8 @@ class Venue < ApplicationRecord
       using: {
         tsearch: { any_word: true }
       }
-    def icon
-      case venue_attribute
+    def icon(attribute)
+      case attribute
       when "Outdoor Space"
         '<i class="fas fa-tree"></i>'
       when "Disabled Toilets"

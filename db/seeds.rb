@@ -20,7 +20,10 @@ User.create(first_name: "test", last_name: "test", username: "test", email: "tes
 
   # venue_types = Venue::VENUE_TYPES.sample
 
-  venue_attributes = Venue::VENUE_ATTRIBUTES.sample
+  venue_attributes = Venue::VENUE_ATTRIBUTES
+
+  desc = "The Mayfair Chippy is a quintessentially British restaurant with an emphasis on great fish dishes, serving only the freshest produce to the highest standards.
+Fish & Chips is the specialty, but we also serve traditional classic British dishes such as our famous Shepherd’s Pie and Steak & Kidney Pudding. To complement the fabulous food, we also offer a selection of world wines and retro cocktails."
 
 #   venue = Venue.new(
 #     name: Faker::Restaurant.name,
@@ -64,15 +67,16 @@ url = "https://api.yelp.com/v3/businesses/search?location=london&term=restaurant
 data = URI.open(url, "Authorization" => "Bearer #{ENV['YELP_API_KEY']}").read
 venues = JSON.parse(data)["businesses"]
 venues.each do |venue|
+  attribute = venue_attributes.sample(3)
  Venue.create(
   name: venue["name"],
-  description: Faker::Restaurant.description,
+  description: desc,
   image: venue["image_url"],
   address: venue["location"]["display_address"].join(', '),
   venue_type: venue["categories"][0]["title"],
   venue_type_list: venue["categories"][0]["title"],
-  venue_attribute: venue_attributes,
-  venue_attribute_list: venue_attributes
+  venue_attribute: attribute,
+  venue_attribute_list: attribute
   )
 end
 
