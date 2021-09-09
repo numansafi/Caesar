@@ -5,7 +5,7 @@
         <%= image_tag(booking.venue.image) %>
         <div class="booking-card-product-infos">
           <h2><%= booking.venue.name %></h2>
-          <p><i class="fas fa-clock"></i> <%= booking.date%> at <%= booking.time %></p>
+          <p><i class="fas fa-clock"></i> <%= booking.date.strftime("%d/%m/%y")%> at <%= booking.time.strftime("%H:%M") %></p>
           <p> <i class="fas fa-user"></i>
 
 </i> Table for <%= booking.number_of_people%> people</p>
