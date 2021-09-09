@@ -1,19 +1,37 @@
-<h2>My Bookings</h2>
-
-<%  @bookings.each do |booking| %>
-      <div class="booking-card-product mt-1">
+<div class="container col-12 mt-4 mb-5">
+  <div class="booking-header">
+    <h2>Upcoming Reservations</h2>
+  </div>
+  <%  @bookings.select {|booking| Time.now < DateTime.new(booking.date.year, booking.date.month, booking.date.day, booking.time.hour, booking.time.min) }.each do |booking| %>
+      <div class="booking-card-product">
         <%= image_tag(booking.venue.image) %>
         <div class="booking-card-product-infos">
           <h2><%= booking.venue.name %></h2>
           <p><i class="fas fa-clock"></i> <%= booking.date.strftime("%d/%m/%y")%> at <%= booking.time.strftime("%H:%M") %></p>
           <p> <i class="fas fa-user"></i>
 
-</i> Table for <%= booking.number_of_people%> people</p>
+          </i> Table for <%= booking.number_of_people%> people</p>
+          <span><%= link_to "View", venue_path(booking.venue.id) %></span>
           <span><%= link_to "Modify", edit_venue_booking_path(booking.venue.id, booking) %></span>
           <span><%= link_to "Cancel", booking_path(booking), method: :delete, id: "sweet-alert-delete" %></span>
         </div>
       </div>
 <% end %>
 
-<%# .strftime("%d/%m/%y")
-.strftime("%H:%M") %>
+  <div class="booking-header mt-5">
+    <h2>Past Reservations</h2>
+  </div>
+  <%  @bookings.select {|booking| Time.now > DateTime.new(booking.date.year, booking.date.month, booking.date.day, booking.time.hour, booking.time.min) }.each do |booking| %>
+      <div class="booking-card-product">
+        <%= image_tag(booking.venue.image) %>
+        <div class="booking-card-product-infos">
+          <h2><%= booking.venue.name %></h2>
+          <p><i class="fas fa-clock"></i> <%= booking.date.strftime("%d/%m/%y")%> at <%= booking.time.strftime("%H:%M") %></p>
+          <p> <i class="fas fa-user"></i>
+
+          </i> Table for <%= booking.number_of_people%> people</p>
+          <span id="review-link"><%= link_to "Write a Review", venue_path(booking.venue.id) %></span>
+        </div>
+      </div>
+  <% end %>
+</div>

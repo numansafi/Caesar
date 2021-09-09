@@ -2,4 +2,4 @@ meta_product_name: "Caesar"
 meta_title: "Caesar - Conquer Your World "
 meta_description: "
 Search and book  your new favourite venue using our accessibility filters.Leave reviews and let the community know which venues are accessible "
-meta_image: "caserman.png" # should exist in `app/assets/images/`
+meta_image: "https://cdn-icons-png.flaticon.com/512/4802/4802121.png" # should exist in `app/assets/images/`

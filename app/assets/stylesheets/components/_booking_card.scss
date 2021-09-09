@@ -2,9 +2,15 @@
   overflow: hidden;
   height: 200px;
   background: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   display: flex;
   align-items: center;
+  margin-bottom: 4px;
+}
+
+#review-link {
+  color: $purple;
 }
 
 .booking-card-product img {
@@ -45,4 +51,21 @@
 .booking-card-product-infos i {
   color: $orange;
   font-size: 16px;
+}
+
+.booking-header {
+  overflow: hidden;
+  border-radius: 8px;
+  height: 75px;
+  background: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 2px;
+}
+
+.booking-header h2 {
+  color: $blue;
+  font-size: 25px;
 }
