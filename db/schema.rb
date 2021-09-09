@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_08_195121) do
+ActiveRecord::Schema.define(version: 2021_09_09_184047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_195121) do
     t.string "image"
     t.float "latitude"
     t.float "longitude"
+    t.string "photos", default: [], array: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

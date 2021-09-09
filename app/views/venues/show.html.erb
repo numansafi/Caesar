@@ -8,13 +8,13 @@
     <div id="carouselExampleControls" class="carousel slide w-50" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%= image_tag "https://s3-media2.fl.yelpcdn.com/bphoto/OGBqEyboylsdLqZ0Rpr1Sg/o.jpg", class: 'd-block w-100', alt: 'First Slide' %>
+          <%= image_tag @venue.photos[0], class: 'd-block w-100', alt: 'First Slide' %>
         </div>
         <div class="carousel-item">
-          <%= image_tag "https://s3-media1.fl.yelpcdn.com/bphoto/Ewbm42k5TUYUNlC4EVE4tw/o.jpg", class: 'd-block w-100', alt: 'Second slide' %>
+          <%= image_tag @venue.photos[1], class: 'd-block w-100', alt: 'Second slide' %>
         </div>
         <div class="carousel-item">
-          <%= image_tag "https://s3-media4.fl.yelpcdn.com/bphoto/BDTRkfVSJ8hoAT0amAfwkw/o.jpg", class: 'd-block w-100', alt: 'Third Slide' %>
+          <%= image_tag @venue.photos[2], class: 'd-block w-100', alt: 'Third Slide' %>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

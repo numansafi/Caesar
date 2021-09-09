@@ -76,6 +76,7 @@ venues.each do |ven|
     name: venue["name"],
     description: desc,
     image: venue["image_url"],
+    photos: venue["photos"],
     address: venue["location"]["display_address"].join(', '),
     venue_type: venue["categories"][0]["title"],
     venue_type_list: venue["categories"][0]["title"],
