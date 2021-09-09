@@ -1,6 +1,5 @@
+<%# <h1 class="venue-header">Venues in your area</h1> %>
   <div class="venues-card-container" style= color: $blue;>
-      <h1 class="venue-header">Venues in your area</h1>
-
       <% @venues.each do |venue| %>
       <div  class="venue-index-card">
       <%= image_tag(venue.image) %>
@@ -9,8 +8,10 @@
             <p><%= venue.venue_type %></p>
             <p class="venue-text">
             <% venue.venue_attribute.each do |attr|%>
+            <div class="d-flex">
               <%= attr %>
               <%= venue.icon(attr).html_safe %>
+            </div>
             <% end %>
             </p>
               <div class="star-style">
@@ -20,6 +21,8 @@
               <span class="fa fa-star"></span>
               <span class="fa fa-star"></span>
               </div>
+          </div>
+          <div class="venue-button">
             <h2><%= link_to "Find out more", venue_path(venue),  class: 'purple-button', id: 'card-index-button'  %></h2>
           </div>
       </div>

@@ -50,6 +50,17 @@
   // align-items: between;
   margin-left: 40px;
   overflow: hidden;
+
+}
+
+.d-flex {
+  color: $orange;
+  font-size: 18px;
+}
+
+.find-out-more {
+  display: flex;
+  flex-direction: column;
 }
 
 .checked {
@@ -60,11 +71,19 @@
   color: #f95a00 !important;
 }
 .venue-header {
-  margin-bottom: 16px;
+  padding-left: 38px;
+  padding-top: 18px;
+  color: $blue;
 }
 .star-style {
   margin: 12px 0px 12px 0px;
 }
 #card-index-button {
   margin-left: 0px;
+}
+
+.venue-button {
+  position: absolute;
+  margin-left: 556px;
+  margin-top: 180px;
 }
