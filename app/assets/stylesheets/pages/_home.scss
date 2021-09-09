@@ -3,6 +3,12 @@
   z-index: 100;
 }
 
+#caesar-values {
+  text-align: center;
+  margin-top: 20%;
+  color: $blue;
+}
+
 #caesar-search-box {
   display: flex;
   justify-content: space-around;
@@ -34,7 +40,7 @@
   // padding-bottom: 50px;
   // padding-left: 50px;
   h2 {
-    color: white;
+    color: #F6F6F6;
   }
 }
 
