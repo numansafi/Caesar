@@ -66,19 +66,22 @@ Fish & Chips is the specialty, but we also serve traditional classic British dis
 url = "https://api.yelp.com/v3/businesses/search?location=london&term=restaurants&en_GB&limit=50&sort_by=best_match"
 data = URI.open(url, "Authorization" => "Bearer #{ENV['YELP_API_KEY']}").read
 venues = JSON.parse(data)["businesses"]
-venues.each do |venue|
-  attribute = venue_attributes.sample(3)
- Venue.create(
-  name: venue["name"],
-  description: desc,
-  image: venue["image_url"],
-  address: venue["location"]["display_address"].join(', '),
-  venue_type: venue["categories"][0]["title"],
-  venue_type_list: venue["categories"][0]["title"],
-  venue_attribute: attribute,
-  venue_attribute_list: attribute
-  )
-end
 
-puts "Seeding Finsihed"
-puts venues
+venues.each do |ven|
+  url_id = "https://api.yelp.com/v3/businesses/#{ven['id']}"
+  data_id = URI.open(url_id, "Authorization" => "Bearer #{ENV['YELP_API_KEY']}").read
+  venue = JSON.parse(data_id)
+  attribute = venue_attributes.sample(3)
+  Venue.create(
+    name: venue["name"],
+    description: desc,
+    image: venue["image_url"],
+    photos: venue["photos"],
+    address: venue["location"]["display_address"].join(', '),
+    venue_type: venue["categories"][0]["title"],
+    venue_type_list: venue["categories"][0]["title"],
+    venue_attribute: attribute,
+    venue_attribute_list: attribute
+  )
+  puts venue
+end
