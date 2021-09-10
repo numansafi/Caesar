@@ -44,13 +44,13 @@
 </div>
 <hr>
   <div class="location-container">
-    <h2>Location & Hours</h2>
+    <h2>Location</h2>
     <div class="map-container">
+            <h6 class="address"><i class="fas fa-map-marker-alt"></i>  <%= @venue.address.chomp(", United Kingdom")%></h6>
       <div id="map"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-        <h6 class="address"><i class="fas fa-map-marker-alt"></i>  <%= @venue.address.chomp(", United Kingdom")%></h6>
     </div>
   </div>
 
