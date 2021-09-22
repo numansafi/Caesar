@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+**Caesar** is a restaurant booking web app for the neurodiverse community. Users are able to search for restaurants that cater for their specific needs.
